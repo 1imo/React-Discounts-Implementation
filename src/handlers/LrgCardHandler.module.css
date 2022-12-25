@@ -1,0 +1,16 @@
+.displayHeader {
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.discountList {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0 20px;
+    display: flex;
+    column-gap: 20px;
+    width: calc(100vw - 20px);
+    overflow-x: auto;
+    height: 180px;
+}
