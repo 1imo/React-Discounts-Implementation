@@ -44,7 +44,6 @@ function Discounts() {
 
         if (itemDependentOn) {
             loadedData.map((item, index) => {
-                console.log(item)
                 if(item.sku == array[2][1]) {
                     array.push(["itemDependentOnData", item])
                 }
@@ -53,6 +52,19 @@ function Discounts() {
                 }
             })
         }
+
+        if (itemMulti) {
+            loadedData.map((item, index) => {
+                if(item.sku == array[0][1]) {
+                    array.push(["itemMultiData", item])
+                }
+            })
+        }
+
+
+
+
+
         
         let obj = {}
         

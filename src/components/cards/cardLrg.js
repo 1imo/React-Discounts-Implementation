@@ -25,14 +25,14 @@ function CardLrg(props) {
             let obj = {
                 id: props.id,
                 sku: props.sku,
-                price: 0,
+                price: props.discount.itemMultiData.price,
                 quantity: 0,
                 backgroundColour: props.backgroundColour,
 
             }
             
             for (let i = 0; i < props.discount.itemQuantityCount; i++) {
-                if (i == props.discount.itemQuantityCount - 1) { obj.price = props.discount.itemMultiPrice }
+                
                 BasketCtx.inBasket.push(obj)
             }
         } else {
@@ -41,11 +41,12 @@ function CardLrg(props) {
             let objItemOne = {
                 id: props.id,
                 sku: props.sku,
-                price: parseInt(props.discount.itemDependentOnPrice),
+                price: parseInt(props.discount.subjectItemData.price),
                 quantity: 1,
                 backgroundColour: props.backgroundColour,
             }
-            console.log(objItemOne)
+            
+            
 
             let objItemTwoRaw = props.discount.itemDependentOnData
 

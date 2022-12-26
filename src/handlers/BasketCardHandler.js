@@ -37,18 +37,21 @@ function BasketCardHandler(props) {
     for (let i = 0; i < sortedArr.length; i++) {
 
 
-        let tempObj = {...sortedArr[i][1]}
+        
+        let tempObj = { ...sortedArr[i][1]}
+        console.log(tempObj)
         tempObj.quantity = sortedArr[i][2]
         let total = parseInt(tempObj.price) * tempObj.quantity
         prices+=total
         finalArr.push(tempObj)
     }
+    console.log(finalArr)
     
 
     return (<div>
         <SmlCardHandler data={finalArr} />
 
-        <DiscountsEl />
+        <DiscountsEl data={finalArr} />
         <Total total={prices / 100} />
 
     </div>)
