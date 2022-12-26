@@ -13,7 +13,7 @@ function Layout() {
             </div>
             <div className="navActions">
                 <Link to="/basket"><img src="/shopping-bag.svg" alt="Basket"/></Link>
-                <Link to="/menu"><img src="/menu.svg" alt="Credits" /></Link>
+                <img src="/menu.svg" alt="Credits" />
             </div>
         </div>
     } else {

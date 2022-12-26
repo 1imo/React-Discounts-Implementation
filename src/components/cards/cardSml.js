@@ -28,7 +28,7 @@ function CardSml(props) {
     return <li className="cardSml" style={props.backgroundColour ? {backgroundColor: props.backgroundColour} : {backgroundColor: "#E3655B"}}>
         <div className="cardSml-info">
             <div className="cardSml-title">{props.sku}</div>
-            <div className="cardSml-price">{props.price}</div>
+            <div className="cardSml-price">{props.price / 100}</div>
         </div>
         <div className="cardSml-actions">
             <div><img src="/plus-square.svg" style={{stroke: props.backgroundColor}} alt="Add 1/ another to basket" onClick={handleAddClick}/></div>

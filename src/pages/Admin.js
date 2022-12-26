@@ -2,6 +2,8 @@ import React from "react";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom"
 import Layout from "../components/layout/layout";
+import classes from "./adminEdits.module.css"
+
 
 function Admin() {
     const navigate = useNavigate()
@@ -39,9 +41,18 @@ function Admin() {
 
     return <div>
             <Layout />
-            <form onSubmit={submitHandler}>
-            <input type="text" ref={sku} id="sku" required/>
-            <input type="number" ref={price} id="price" required/>
+        <div className="displayHeader">Add Item</div>
+        <form onSubmit={submitHandler}>
+            <div className="allDropdowns">
+                <div className="dropdownContainer">
+                    <label>Item Name</label>
+                    <input type="text" ref={sku} id="sku" required/>
+                </div>
+                <div className="dropdownContainer">
+                    <label>Item Price</label>
+                    <input type="number" ref={price} id="price" required />
+                </div>
+            </div>
             <button>Submit</button>
         </form>
         </div>

@@ -8,6 +8,7 @@
     box-shadow: 10px 10px 0px #000000;
     position: relative;
     background-color: #f7f7f7;
+    z-index: 10;
 }
 
 .CardLrgHead {

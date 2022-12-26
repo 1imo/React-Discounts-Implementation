@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import DiscountsEl from "../components/totals/DiscountsEl";
 import Total from "../components/totals/Total";
 import SmlCardHandler from "./SmlCardHandler";
 
 function BasketCardHandler(props) {
+
+    const [discount, setDiscount] = useState()
 
     let idsInArray = []
     let sortedArr = []
@@ -46,13 +49,16 @@ function BasketCardHandler(props) {
         finalArr.push(tempObj)
     }
     console.log(finalArr)
+
+
+    
     
 
     return (<div>
         <SmlCardHandler data={finalArr} />
 
-        <DiscountsEl data={finalArr} />
-        <Total total={prices / 100} />
+        <DiscountsEl data={finalArr} setDiscount={setDiscount} />
+        <Total total={prices / 100 - (discount/100)} />
 
     </div>)
 }

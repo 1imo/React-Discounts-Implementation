@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/layout/layout";
+import classes from "./adminEdits.module.css"
 
 function Discounts() {
     const [isLoading, setIsLoading] = useState(true)
@@ -205,8 +206,8 @@ function Discounts() {
 
     return <div>
         <Layout />
-        <form className="adminEdits discountEdit" onSubmit={submitHandler}>
             <div className="displayHeader">Add Discount</div>
+        <form className="adminEdits discountEdit" onSubmit={submitHandler}>
 
             <div className="allDropdowns">
                 <div className="dropdownContainer">

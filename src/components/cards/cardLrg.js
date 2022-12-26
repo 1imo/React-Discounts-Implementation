@@ -15,9 +15,9 @@ function CardLrg(props) {
     let discountLabel;
 
     if (props.discount.discountType == "multibuy") {
-        discountLabel = `${props.discount.itemQuantityCount} for ${props.discount.itemMultiPrice}`
+        discountLabel = `${props.discount.itemQuantityCount} for ${props.discount.itemMultiPrice / 100}`
     } else {
-        discountLabel = `${props.discount.itemDependentOnPrice} if with ${props.discount.itemDependentOn}`
+        discountLabel = `${props.discount.itemDependentOnPrice / 100} if with ${props.discount.itemDependentOn}`
     }
 
     function handleAddClick() {
